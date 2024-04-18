@@ -28,6 +28,7 @@ const ProductDetail = () => {
           <div className="lg:w-[40%] md:w-[40%] w-[100%]">
             <img
               src={data.image}
+              // image comfrom value pair api
               className="lg:w-[80%] md:w-[80%] m-auto mt-10"
             />
             <div className="md:flex hidden items-center justify-center space-x-3 my-7">
