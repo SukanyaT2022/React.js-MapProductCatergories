@@ -1,8 +1,10 @@
 import './App.css';
-import Home from './Home';
-import Test2 from './Test2';
+// import Home from './Home';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ProductDetail from './ProductDetail';
+// import ProductDetail from './ProductDetail';
+import Detail from './Detail';
+import Test2 from './Test2';
 
 function App() {
   return (
@@ -13,7 +15,14 @@ function App() {
           <Route path="/detail/:id" element={<ProductDetail/>}/>
         </Routes>
       </Router> */}
-    <Test2/>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Test2/>}/>
+          <Route path="/detail/:id" element={<Detail/>}/>
+        </Routes>
+      </Router>
+
     </div>
   );
 }

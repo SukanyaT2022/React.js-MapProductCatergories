@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Test2 = () => {
 
@@ -30,12 +31,13 @@ return(
         <div className=" bg-yellow-200 grid grid-cols-2 grid-row-2 py-5">
           {/* box1 */}
    
-   
     {jewelery && jewelery.map((val)=>(
-            <div key = {val.id}className='m-auto text-center'>
+      <div key = {val.id}className='m-auto text-center'>
+              <Link to={`/detail/${val.id}`}>
               <img src={val.image} className='lg:w-[120px] lg:h-[120px] md:w-[200px] md:h-[200px] m-auto object-contain md:mb-2' />
               <p className='pb-2'>{val.title}</p>
                 <p className='md:mb-2'>{val.price}</p>
+            </Link>
             </div>
       ))}
     
@@ -46,9 +48,11 @@ return(
    
     {womenClothes && womenClothes.map((val)=>(
             <div key = {val.id} className='m-auto text-center'>
+                     <Link to={`/detail/${val.id}`}>
               <img src={val.image} className='lg:w-[120px] lg:h-[120px] md:w-[200px] md:h-[200px] m-auto object-contain md:mb-2' />
               <p className='pb-2'>{val.title}</p>
                 <p className='md:mb-2'>{val.price}</p>
+                </Link>
             </div>
       ))}
   
@@ -59,9 +63,11 @@ return(
 
     {electronics && electronics.map((val)=>(
             <div key = {val.id}  className='m-auto text-center'>
+               <Link to={`/detail/${val.id}`}>
               <img src={val.image} className='lg:w-[120px] lg:h-[120px] md:w-[200px] md:h-[200px] m-auto object-contain md:mb-2' />
               <p className='pb-2'>{val.title}</p>
                 <p className='md:mb-2'>{val.price}</p>
+                </Link>
             </div>
       ))}
  
