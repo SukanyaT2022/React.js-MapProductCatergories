@@ -7,13 +7,13 @@ import ProductDetail from './ProductDetail';
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/detail/:id" element={<ProductDetail/>}/>
         </Routes>
-      </Router>
-    {/* <Test2/> */}
+      </Router> */}
+    <Test2/>
     </div>
   );
 }
